@@ -1,0 +1,169 @@
+html {
+      height: 100%;
+  		background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  margin-top: 100px;
+  width: 500px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #212121;
+  background: white;
+  border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+
+.container h1 {
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #2C3E50;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.search-box h3 {
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #2C3E50;
+  text-align: center
+}
+
+.search-box input {
+  text-align: left;
+  margin-left: 60px;
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  font-size: 14px;
+  font-family: montserrat, sans-serif;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+.container button {
+  width:80px;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: montserrat, sans-serif;
+  color: white;
+  background-color: rgba(155, 89, 182, 0.8);
+  border: none;
+  cursor: pointer;
+
+}
+
+button:hover, button:active {
+  background-color: rgb(155, 89, 182);
+}
+
+
+.container datalist{
+  text-align: left;
+  width: 60%;
+  height: 15px;
+  font-size: 15px;
+  margin: 2px;
+  border-radius: 25px;
+}
+
+
+
+.container option{
+  text-align: left;
+  width: 60%;
+  height: 15px;
+  font-size: 15px;
+  margin: 2px;
+  border-radius: 25px;
+}
+
+
+
+.success-message {
+  margin: 100px;
+}
+
+
+
+.email {
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  color:  #ff9999;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+table.greyGridTable {
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #333333;
+  background-color: #FFFFFF;
+  width: 85%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table.greyGridTable td, table.greyGridTable th {
+  border: 2px solid #333333;
+  padding: 3px 4px;
+}
+
+table.greyGridTable tbody td {
+  font-size: 13px;
+  color: #333333;
+}
+
+table.greyGridTable thead {
+  background: #FFFFFF;
+  border-bottom: 3px solid #333333;
+}
+
+table.greyGridTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 4px solid #333333;
+}
+
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+
+
+table.greyGridTable tfoot td {
+  font-size: 14px;
+}
+
+a:link, a:visited {
+  background-color: rgba(155, 89, 182, 0.8);
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: montserrat, sans-serif;
+  border: none;
+}
+
+a:hover, a:active {
+  background-color: blue;

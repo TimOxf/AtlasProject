@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Address and Owner Search</title>
+
+<head>
+  <link href="../static/css/home.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>ADDRESS AND OWNER SEARCH</h1>
+
+    <div class="search-box">
+      <h3>Address Search</h3>
+      <form action="{{url_for('search_address')}}" method="POST">
+        <input id="address_input" class="input-box" title="Please enter an address" placeholder="Enter Address" type="text" name="address_name" required autocomplete="off">
+        <button type="submit"> SEARCH </button>
+      </form>
+    </div>
+
+    <div class="search-box">
+      <h3>Owner Search</h3>
+      <form action="{{url_for('search_owner')}}" method="POST">
+        <input id="owner_input" title="Please enter a name" placeholder="Enter Owner Name" class='input-box' type="text" name="owner_name" required>
+        <button type="submit"> SEARCH </button>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+
+
+<script type="text/javascript" src="/../static/js/owner_autocomplete.js"></script>
+<script type="text/javascript" src="/../static/js/address_autocomplete.js"></script>

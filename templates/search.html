@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Data Collector App</title>
+
+<head>
+  <link href="../static/css/search.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1><b>Results for: {{term | safe}}</b></h1>
+
+    <table class="greyGridTable">
+
+      <thead>
+        <th>SSL</th>
+        <th>Property Type</th>
+        <th>Address</th>
+        <th>Address #2 (Unit #)</th>
+        <th>Owner</th>
+        <th>Owner 2</th>
+        <th>Status</th>
+      </thead>
+
+      <tbody>
+        {% for result in results %}
+        <tr>
+          <td id='ssl_value'>{{result.ssl}}</td>
+          <td id='proptype_value'>{{result.proptype}}</td>
+          <td id='premiseadd_value'>{{result.premiseadd}}</td>
+          <td id='address2_value'>{{result.premise_unit}}</td>
+          <td id='owner_value'>
+            <form action="{{url_for('search_owner')}}" method="POST">
+              <input type="hidden" name="owner_name" value="{{result.ownername}}" />
+              <button class="search_buttons" type="submit">{{result.ownername}}</button>
+            </form>
+          </td>
+          <td id='owner2_value'>{{result.ownname2}}</td>
+          <td id='status_value' class='getZillow'><button class="search_buttons" id="getZillow">Get Status</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+</body>
+
+</html>
+
+<html>
+
+<script type="text/javascript" src="/../static/js/zillow.js"></script>
