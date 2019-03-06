@@ -31,6 +31,9 @@ def data_query():
     #make headings lower case for postgresql
     df_combined.columns = map(str.lower, df_combined.columns)
 
+    #replace nan with empty string
+    df_combined = df_combined.replace(np.nan, '', regex=True)
+
     #create full premise address column
     df_combined['fullpremise']= df_combined['premiseadd'] + ' ' + df_combined['premise_unit']
 
